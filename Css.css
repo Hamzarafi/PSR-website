@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Author     : hamza
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+body{
+    background-color: #24272E;
+    color: #cccccc;
+}
+header{
+    background-color: #cccccc;
+    color: #24272E;
+    padding: 5px;
+    text-align: center;
+    /*height: 65px;*/
+}
+header a{
+    font-size: 14pt;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 20px 10px;
+    color: #24272E;
+    text-decoration: none;
+}
+header a:hover{
+    background-color: #24272E;
+    color: #cccccc;
+    cursor: pointer;
+}
+#PageTitle{
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 0;
+    color: #999999;
+}
+#title{
+    border-bottom: 3px solid #cccccc;
+    color: #cccccc;
+    padding: 5px;
+    font-size: 32px;
+    
+}
+.button{
+    padding: 5px 10px;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    background-color: #cccccc;
+}
+.button:hover {
+    color: #cccccc;
+    background-color: #666666;    
+    cursor: pointer;
+}
+
+.dropDownBtn {
+    background-color: #cccccc;
+    color: #24272E;
+    padding: 10px 25px;
+    font-size: 14pt;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropDown-content {
+    display: none;
+    position: absolute;
+    background-color: #cccccc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropDown-content a {
+    color: #24272E;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: block;
+}
+.dropDown-content a:hover {
+    background-color: #24272E;
+    color: #cccccc;
+}
+.dropDown:hover .dropDown-content {
+    display: block;
+}
+.dropDown:hover .dropDownBtn {
+    background-color: #24272E;
+    color: #cccccc;
+}
+#content{
+    padding: 10px 10px;
+    width:1000px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 15px auto;
+}
+div#content * {
+    padding: 10px 10px;
+    margin: 5px 5px;
+}
+div#content ul{
+    list-style: circle;
+    padding: 15px;
+}
+@media only screen and (max-width: 600px) {
+    div#panelContainer{
+        display: none;        
+    }
+    #twoColumn{
+        width: 800px;        
+        display: block;        
+    }
+}
