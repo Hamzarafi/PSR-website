@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hamza's website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Style/Css.css" rel="stylesheet" type="text/css"/>
+        <script src="script/angular.radialIndicator.js" type="text/javascript"></script>
+        <script src="script/radialIndicator.js" type="text/javascript"></script>
+         
+        <style>
+            div#panel{
+                background: url(images/rock-paper-scissor-ft.jpg);
+                background-size: 100%;
+                width: 800px;
+                height: 450px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            div#welcome{
+                background: rgba(0,0,0,0.5);
+                color: #999999;
+                height: 180px;
+                width: 760px;
+                padding: 20px;
+                /*position: absolute;
+                top: 505px;*/
+                position: relative;
+                top: 51%;
+            }
+            div#welcome p{
+                font-size: 20px;
+                letter-spacing: 5px;
+    
+            }
+            div#welcome h1{
+                font-size: 68px;
+                font-weight: normal;
+                padding-bottom: 15px;
+            }
+            a#playbutton {
+                width: 100px;
+                background-color: black;
+                position: relative;
+                top: 10px;
+                text-decoration: none;
+            }
+            div#twoColumn{
+                width: 800px;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                margin: 0 auto;
+                padding: 35px ;
+            }   
+            div#twoColumn h1{
+                font-size: 22px;
+                color: white;
+                border-top: 2px solid #cccccc;
+                font-weight: normal;
+                padding-top: 15px;
+                
+            }
+            div#left{
+                width: 375px;
+            }
+            div#right ul{
+                list-style: none;
+                padding: 10px;
+            }
+            div#right ul li{
+                padding: 10px 0;
+            }
+            ul li{
+                list-style: circle;
+                margin-left: 10px;
+            }
+            #textlink{
+                color: #cccccc;
+                text-decoration: none;
+            }
+            #textlink:hover{
+                color: white;
+            }
+            #clock{
+                position: absolute;
+                top: 80%;
+                left: 88%;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="Home.html">HOME</a>
+            <div class="dropDown">
+                <button class="dropDownBtn">HOW TO PLAY</button>
+                <div class="dropDown-content">
+                    <a href="HowToBasics.html">Basics</a>
+                    <a href="HowToTricks.html">Tricks</a>
+                </div>
+            </div>
+            <a href="ContactUs.html">CONTACT US</a>
+            <a href="Game.html">PRACTICE</a>
+        </header>
+        
+        <div id="PageTitle">
+            <h1>Paper, Scissors, Rock</h1>
+            <span id="title">The Ultimate Guide</span>
+        </div>
+        <div id="panelContainer">
+                <div id="panel">
+                    <div id="welcome">
+                        <h1>Welcome</h1>
+                        <p>Already Know How to Play?</p>
+                        <a id="playbutton" class="button" href="Game.html">LET'S PLAY</a>
+                    </div>
+                </div>
+            </div>
+        <div id="twoColumn">
+            <div id='left'>
+                <h1>About the Game</h1>
+                <p>
+                    Paper, Scissors, Rock (aka "Scissors, Paper, Stone") is a simple hand
+                    game that is played around the world, with many different names and 
+                    variations. It is commonly used as a way of coming to decisions, and
+                    in some cases is even played for sport. The rules require that 
+                    competing players use one hand to form one of three shapes at 
+                    an agreed-upon time. The person that plays the strongest “object” 
+                    is the winner of the game. It's that easy! Rock Paper Scissors is 
+                    a simple game that anybody can play and win. There is no obvious 
+                    advantage to the stronger, older, more experienced opponent.
+                </p>
+            </div>
+            <div id='right'>
+                <h1>Want to know about the Game?</h1>
+                <ul>
+                    <li><a id="textlink" href="HowToBasics.html">Click here to learn basics</a></li>
+                    <li><a id="textlink" href="HowToTricks.html">Click here to learn tricks</a></li>
+                    <li><a id="textlink" href="Game.html">Click here to play the game</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="clock"> </div>
+        <script>
+            var radialObj = radialIndicator('#clock', {
+            radius: 60,
+            barWidth: 5,
+            barColor: '#FF0000',
+            minValue: 0,
+            maxValue: 60,
+            fontWeight: 'normal',
+            roundCorner: true,
+            format: function (value) {
+                var date = new Date();
+                return date.getHours() + ':' + date.getMinutes();
+    }
+});
+ 
+setInterval(function () {
+    radialObj.value(new Date().getSeconds() + 1);
+}, 1000);
+        </script>
+    </body>
+</html>

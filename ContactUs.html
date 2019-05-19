@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Style/Css.css" rel="stylesheet" type="text/css"/>
+        <style>
+            #formOuter{
+                width: 1000px;
+                position: relative;
+                left: 15%;
+            }
+            .inputBox {
+                width: 100%;
+                padding: 10px;  
+                border: 1px solid #cccccc;
+                border-radius: 5px; 
+                box-sizing: border-box;
+                margin-top: 6px; 
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="Home.html">HOME</a>
+            <div class="dropDown">
+                <button class="dropDownBtn">HOW TO PLAY</button>
+                <div class="dropDown-content">
+                    <a href="HowToBasics.html">Basics</a>
+                    <a href="HowToTricks.html">Tricks</a>
+                </div>
+            </div>
+            <a href="ContactUs.html">CONTACT US</a>
+            <a href="Game.html">PRACTICE</a>
+        </header>
+        
+        <div id="PageTitle">
+            <span id="title">Contact Us</span>
+        </div>
+        <h2 style="text-align: center;">If you have anything to ask, feel free to contact us.</h2>
+        <div id='formOuter'>
+            <form class="form">
+                <div>
+                    <label>Name</label>
+                    <input class="inputBox" type="text" name="Name" required>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input class="inputBox" type="text" name="Email" required>
+                </div>
+                <div>
+                    <label>Subject</label>
+                    <input class="inputBox" name="Subject" required>
+                </div>
+                <div>
+                    <label>Message</label>
+                    <input class="inputBox" name="Message" required style="height: 100px;">
+                </div>
+                <button type="submit" class="button">Send</button>
+            </form>
+        </div>
+    </body>
+</html>
