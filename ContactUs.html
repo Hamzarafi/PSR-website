@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="Css.css" rel="stylesheet" type="text/css"/>
+        <link href="Style/Css.css" rel="stylesheet" type="text/css"/>
         <style>
             #formOuter{
                 width: 1000px;
@@ -29,7 +29,7 @@ and open the template in the editor.
     </head>
     <body>
         <header>
-            <a href="index.html">HOME</a>
+            <a href="Home.html">HOME</a>
             <div class="dropDown">
                 <button class="dropDownBtn">HOW TO PLAY</button>
                 <div class="dropDown-content">
@@ -46,7 +46,7 @@ and open the template in the editor.
                 </div>
             </div>
         </header>
-        
+
         <div id="PageTitle">
             <span id="title">Contact Us</span>
         </div>
@@ -55,22 +55,42 @@ and open the template in the editor.
             <form class="form">
                 <div>
                     <label>Name</label>
-                    <input class="inputBox" type="text" name="Name" required>
+                    <input class="inputBox" id="formName" type="text" name="Name" required>
                 </div>
                 <div>
                     <label>Email</label>
-                    <input class="inputBox" type="text" name="Email" required>
+                    <input class="inputBox" id="formEmail" type="text" name="Email" required>
                 </div>
                 <div>
                     <label>Subject</label>
-                    <input class="inputBox" name="Subject" required>
+                    <input class="inputBox" id="formSubject" name="Subject" required>
                 </div>
                 <div>
                     <label>Message</label>
-                    <input class="inputBox" name="Message" required style="height: 100px;">
+                    <input class="inputBox" id="formMes" name="Message" required style="height: 100px;">
                 </div>
-                <button type="submit" class="button">Send</button>
+                <button type="button" id="submitButton" onclick="submitFunction()" class="button">Send</button>
+
             </form>
         </div>
+        <script>
+            function submitFunction() {
+                var name = document.getElementById("formName");
+                var email = document.getElementById("formEmail");
+                var sub = document.getElementById("formSubject");
+                var mes = document.getElementById("formMes");
+                
+                console.log("Name: "+ name.value);
+                console.log("Email: "+ email.value);
+                console.log("Subject: " + sub.value);
+                console.log("Message: " + mes.value);
+                
+                name.value = "";
+                email.value = "";
+                sub.value = "";
+                mes.value = "";
+                
+            }
+        </script>
     </body>
 </html>
